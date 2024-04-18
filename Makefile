@@ -41,6 +41,12 @@ endif
 
 deploy:
 	@forge script script/Deploy.s.sol:Deploy $(NETWORK_ARGS)
+
+deployMood:
+	@forge script script/DeployMoodNft.s.sol:DeployMoodNft $(NETWORK_ARGS)
 	
 mint:
 	@forge script script/interaction.s.sol:MintBasicNft $(NETWORK_ARGS)
+
+mintMood:
+	@forge script script/interaction.s.sol:MintMoodNft $(NETWORK_ARGS)
